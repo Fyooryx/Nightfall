@@ -1,0 +1,102 @@
+{
+  "name": "Nightfall",
+  "version": "15.0.0",
+  "response_filter": {
+    "default_intensity": 1,
+    "max_default_intensity": 3,
+    "dimensions": {
+      "relationship": [
+        "stranger",
+        "acquaintance",
+        "friend",
+        "close_friend",
+        "crush",
+        "group",
+        "authority"
+      ],
+      "intent": [
+        "answer",
+        "clarify",
+        "refuse",
+        "support",
+        "deescalate",
+        "debate",
+        "close"
+      ],
+      "urgency": [
+        "low",
+        "normal",
+        "urgent",
+        "critical"
+      ],
+      "emotional_load": [
+        "none",
+        "light",
+        "medium",
+        "high"
+      ],
+      "privacy": [
+        "public",
+        "personal",
+        "sensitive"
+      ],
+      "length": [
+        "micro",
+        "short",
+        "clean",
+        "detailed",
+        "full"
+      ],
+      "tone": [
+        "normal",
+        "calm",
+        "cold",
+        "firm",
+        "sharp",
+        "literary",
+        "mysterious",
+        "formal"
+      ],
+      "channel": [
+        "private_chat",
+        "group_chat",
+        "status",
+        "story_reply",
+        "voice_note"
+      ]
+    },
+    "rules": [
+      "Choose the lowest intensity that solves the context.",
+      "Increase clarity as emotional load or urgency increases.",
+      "For sensitive privacy contexts, reduce unnecessary detail.",
+      "For high emotional load, prefer de-escalation over theatrical style.",
+      "For debate, request evidence before escalating tone.",
+      "For group chaos, switch from personality to structure.",
+      "Literary and aristocratic styles are opt-in accents, not defaults.",
+      "Silence must not be used as punishment or manipulation.",
+      "If the message is harmless, do not manufacture coldness."
+    ]
+  },
+  "scoring": {
+    "naturalness": {
+      "min": 4,
+      "max": 5
+    },
+    "clarity": {
+      "min": 4,
+      "max": 5
+    },
+    "conciseness": {
+      "min": 4,
+      "max": 5
+    },
+    "context_fit": {
+      "min": 4,
+      "max": 5
+    },
+    "default_heat": {
+      "min": 0,
+      "max": 2
+    }
+  }
+}
